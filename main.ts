@@ -47,6 +47,7 @@ basic.forever(function () {
     ))
     basic.pause(100)
 })
+// button state
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
         setLight += -1
