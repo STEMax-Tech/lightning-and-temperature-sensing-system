@@ -1,0 +1,29 @@
+{
+    "name": "Lightning And Temperature Sensing System",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "eprom-microbit": "github:zobclub/eprom-microbit#3424f25b4ce6257e2f43f8cff2fb3d3226cd37a2",
+        "i2cLCD1602": "github:makecode-extensions/i2clcd1602#v1.5.0",
+        "Environment-and-Science-IoT": "github:tinkertanker/pxt-iot-environment-kit#v5.2.7",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.5"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "6.0.28",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
