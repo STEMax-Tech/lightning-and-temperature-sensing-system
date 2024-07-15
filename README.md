@@ -24,7 +24,4 @@ To edit this repository in MakeCode.
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 
 ## Connection Diagram
-[Diagram-DHT11 & Light Sensor Control Light.png](https://drive.google.com/file/d/1C_OQECojmP_HydUKFR7P_idJOQ9kNHV8/)
-
-## Program Blocks
-[DHT11 & Light Sensor Control Light.png](https://drive.google.com/file/d/1XUHGIh31808EZ-viw3Y0XJU0LVElLqBO/)
+<img src="https://raw.githubusercontent.com/STEMax-Tech/lightning-and-temperature-sensing-system/73adb7b4f46b49a01c39c03b48df83e7cc03dded/Hardware-DHT11%20%26%20Light%20Sensor%20Control%20Light.drawio.svg"/>
