@@ -10,9 +10,9 @@ basic.forever(function () {
     serial.writeLine("Air Humi: " + airTemp + " %")
     serial.writeLine("Light: " + senLight + " %")
     I2C_LCD1602.ShowString("Te:" + Math.round(airTemp) + "C  ", 0, 0)
-    I2C_LCD1602.ShowString("Hu:" + Math.round(airHumi) + "%  ", 9, 0)
-    I2C_LCD1602.ShowString("Li:" + Math.round(senLight) + "%  ", 0, 1)
-    I2C_LCD1602.ShowString("SLi:" + Math.round(setLight) + "   ", 9, 1)
+    I2C_LCD1602.ShowString("Hu:" + airHumi + "%  ", 9, 0)
+    I2C_LCD1602.ShowString("Li:" + senLight + "%  ", 0, 1)
+    I2C_LCD1602.ShowString("SLi:" + setLight + "   ", 9, 1)
     basic.pause(100)
 })
 basic.forever(function () {
