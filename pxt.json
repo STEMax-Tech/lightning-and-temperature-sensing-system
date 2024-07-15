@@ -1,6 +1,6 @@
 {
     "name": "lightning-and-temperature-sensing-system",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "dependencies": {
         "core": "*",
