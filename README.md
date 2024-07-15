@@ -23,8 +23,8 @@ To edit this repository in MakeCode.
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 
-**Connection Diagram
+## Connection Diagram
 [Diagram-DHT11 & Light Sensor Control Light.png](https://drive.google.com/file/d/1C_OQECojmP_HydUKFR7P_idJOQ9kNHV8/)
 
-**Program Blocks
+## Program Blocks
 [DHT11 & Light Sensor Control Light.png](https://drive.google.com/file/d/1XUHGIh31808EZ-viw3Y0XJU0LVElLqBO/)
