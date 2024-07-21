@@ -49,6 +49,12 @@ basic.forever(function () {
 })
 // button state
 basic.forever(function () {
+    if (input.buttonIsPressed(Button.AB)) {
+        while (input.buttonIsPressed(Button.AB)) {
+            basic.showIcon(IconNames.Yes)
+        }
+        EEPROM.writew(100, setLight)
+    }
     if (input.buttonIsPressed(Button.A)) {
         setLight += -1
         if (senLight < 0) {
@@ -73,12 +79,5 @@ basic.forever(function () {
             . . # . .
             . . . . .
             `)
-    }
-    if (input.logoIsPressed()) {
-        while (input.logoIsPressed()) {
-            basic.showIcon(IconNames.Yes)
-        }
-        EEPROM.writew(100, setLight)
-        music.play(music.tonePlayable(880, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
     }
 })
