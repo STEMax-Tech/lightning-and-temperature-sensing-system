@@ -1,11 +1,12 @@
-let senLight = 0
 let airHumi = 0
+let senLight = 0
 let airTemp = 0
-pins.digitalWritePin(DigitalPin.P14, 0)
-pins.digitalWritePin(DigitalPin.P15, 0)
 let setLight = EEPROM.readw(100)
-I2C_LCD1602.LcdInit(39)
+I2C_LCD1602.LcdInit(33)
 basic.forever(function () {
+    serial.writeLine("Air Temp: " + airTemp + " C")
+    serial.writeLine("Air Humi: " + airTemp + " %")
+    serial.writeLine("Light: " + senLight + " %")
     I2C_LCD1602.ShowString("Te:" + Math.round(airTemp) + "C  ", 0, 0)
     I2C_LCD1602.ShowString("Hu:" + airHumi + "%  ", 9, 0)
     I2C_LCD1602.ShowString("Li:" + senLight + "%  ", 0, 1)
@@ -25,9 +26,9 @@ basic.forever(function () {
 })
 basic.forever(function () {
     airTemp = Environment.dht11value(Environment.DHT11Type.DHT11_temperature_C, DigitalPin.P2)
-    basic.pause(200)
+    basic.pause(500)
     airHumi = Environment.dht11value(Environment.DHT11Type.DHT11_humidity, DigitalPin.P2)
-    basic.pause(200)
+    basic.pause(500)
 })
 // button state
 basic.forever(function () {
@@ -64,11 +65,11 @@ basic.forever(function () {
 })
 basic.forever(function () {
     senLight = Math.round(pins.map(
-    pins.analogReadPin(AnalogPin.P1),
+    pins.analogReadPin(AnalogReadWritePin.P1),
     0,
     1023,
-    100,
-    0
+    0,
+    100
     ))
-    basic.pause(200)
+    basic.pause(100)
 })
